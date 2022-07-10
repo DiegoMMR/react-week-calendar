@@ -1,0 +1,38 @@
+.form {
+  padding: 20px;
+
+  .form-item {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #e3e3e3;
+      border-radius: 3px;
+    }
+
+    .submit-btn {
+      background-color: #009696;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #3ac4c4;
+    }
+
+    .errors {
+      color: red;
+      font-size: 0.8rem;
+      margin-top: 10px;
+    }
+  }
+}

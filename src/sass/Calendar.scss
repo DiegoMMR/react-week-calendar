@@ -1,0 +1,160 @@
+$primaryColor: #2c74d3;
+$borderColor: #e3e3e3;
+$hoverColor: #d7f0fa;
+
+.calendar-container {
+  width: 100%;
+
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid $borderColor;
+
+    .today-btn {
+      color: $primaryColor;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $hoverColor;
+      }
+    }
+
+    .arrow {
+      border: solid $primaryColor;
+      border-width: 0 3px 3px 0;
+      display: block;
+      padding: 3px;
+    }
+
+    .right {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    .left {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+
+    .arrow-btn {
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: $hoverColor;
+      }
+    }
+
+    .title {
+      font-size: 25px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .settings-btn {
+      display: inherit;
+      margin-left: auto;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: $hoverColor;
+      }
+
+      img {
+        filter: invert(43%) sepia(79%) saturate(4038%) hue-rotate(201deg) brightness(90%) contrast(81%); // to match $primaryColor
+        height: 25px;
+        width: 25px;
+      }
+    }
+  }
+
+  .days-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    // mobile
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    .day {
+      flex-grow: 1;
+      min-width: 100px;
+
+      .day-title {
+        font-size: 15px;
+        text-align: center;
+        border-bottom: 1px solid $borderColor;
+        margin-top: 15px;
+
+        &.today {
+          font-weight: bold;
+        }
+
+        .day-number {
+          font-size: 25px;
+          margin-bottom: 10px;
+          text-align: center;
+          padding: 10px;
+
+          &.today {
+            color: $primaryColor;
+          }
+        }
+      }
+
+      &:first-child {
+        .day-times {
+          .time-box {
+            border-left: 1px solid $borderColor;
+          }
+        }
+      }
+
+      // mobile
+      @media (max-width: 768px) {
+        .day-times {
+          .time-box {
+            border-left: 1px solid $borderColor;
+          }
+        }
+      }
+
+      .day-times {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .time-box {
+          width: 100%;
+          height: 50px;
+          border-bottom: 1px solid $borderColor;
+          border-right: 1px solid $borderColor;
+
+          &:hover {
+            background-color: $hoverColor;
+          }
+
+          .hour {
+            font-size: 11px;
+            color: #8c8c8c;
+            margin-left: 5px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
