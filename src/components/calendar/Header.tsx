@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ConfigModal } from "./ConfigModal";
 import { IConfig } from "../../interfaces/config";
 import moment from "moment";
-import Gear from "../../assets/gear.svg";
+import Gear from "../../assets/gear.png";
 
 interface IProps {
   days: moment.Moment[];
